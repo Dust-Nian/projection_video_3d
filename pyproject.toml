@@ -1,0 +1,27 @@
+[build-system]
+requires = ["maturin>=1.8,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "projection_video_3d"
+description = "Add your description here"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+dynamic = ["version"]
+dependencies = [
+    "maturin>=1.8.3",
+    "numpy>=2.2.5",
+    "opencv-python>=4.11.0.86",
+    "pyinstaller>=6.13.0",
+]
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
+
+[[tool.uv.index]]
+url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
+default = true
